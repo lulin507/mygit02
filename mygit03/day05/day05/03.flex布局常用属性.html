@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box {
+				border: 5px solid #000000;
+				height: 1000px;
+			/*	width: 800px;*/
+				display: flex ; /*将父元素编程一个伸缩盒子  作用可以让 子元素变为一行*/
+				/*改变轴向的距离 */
+				flex-direction: row-reverse; /*主轴方向从右到左*/
+				flex-direction: column;/*主轴方向从上到下*/
+				flex-direction: column-reverse;/*主轴方向从下到上*/
+				flex-direction: row; /*主轴方向从左到右*/
+				
+				/*改变所有元素在主轴方向上的位置*/
+				justify-content: flex-end; /* 所有元素以主轴方向结束位置对齐*/
+				justify-content: center; 
+				/*将父盒子平均分割成5分 然后 每个元素在当前的位置上居中*/
+				justify-content: space-around;/*环绕对齐*/
+				justify-content: space-between;/*两端对齐*/
+				justify-content: flex-start; /*默认 所有元素以主轴方向起始位置对齐*/
+				
+				/*设置元素在侧轴上的位置*/
+				align-items: flex-end; /*表示侧轴的底部对齐*/
+				align-items: center; /*侧轴方向中间对齐*/
+				align-items: stretch; /*拉伸对齐  盒子不能有高度  作用没有高度的元素 填满整个侧轴*/
+				align-items: baseline; /*基线对齐*/
+				align-items: flex-start; /*默认属性  表示侧轴的起始对齐*/	
+				
+				/*是否换行  */
+				flex-wrap: nowrap; /*不换行*/
+				/*flex-wrap: wrap; *//*换行*/
+				
+				/*堆栈属性  设置侧轴上的  元素位置   只针对于 换行 flex-wrap:wrap 才起作用 */
+				align-content: flex-start;
+		
+				align-content: center;
+				align-content: space-around;
+				align-content: space-between;
+				align-content: flex-end;
+				
+				/*order 设置在子盒子中的  
+				 
+				 *  order 数值越大  越靠后
+				 *  flex  按比例分配   
+				 *    设置flex 的属性  该元素的宽度高度值  就失效了  flex 会帮助我们填满整个父元素 
+				 *  align-self 覆盖父元素上的align-items 上的属性 即为 改变某一个元素的侧轴上的位置
+				 * */
+				 
+				
+			}
+			
+			div.a,div.b,div.c,div.d,div.e {
+				width: 200px;
+				height: 200px;
+				text-align: center;
+				line-height: 200px;
+				font-size: 25px;
+				color: #fff;
+			}
+			
+			.a {
+				background-color: red;
+				width: 400px!important;;
+		/*    line-height: 80px!important;;*/
+		      /*    order: 9;*/
+		         flex: 1;
+		         align-self: center;  /*覆盖了父元素上的  align-items*/
+		          
+			}
+			
+			.b {
+				background-color: yellow;
+			    color:#000!important;	
+			    /*  order: 99;	*/
+			    flex: 2;
+			}
+			
+			.c {
+			     background-color: green;
+				/*	line-height: 280px!important;*/
+				  flex: 4;
+			}
+			
+			.d {
+			    background-color: black;
+			}
+			
+			.e {
+			    background-color: gray;	
+			}
+			
+			.clearbox::after {
+				content: 'a';
+				display: block;
+				clear: both;
+				width: 0;
+				height: 0;
+				overflow: hidden;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div class="box">
+			 <div class="a">1</div>
+			 <div class="b">2</div>
+			 <div class="c">3</div>
+			 <div class="d">4</div>
+			 <div class="e">5</div>
+			 
+		</div>
+	</body>
+</html>

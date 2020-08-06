@@ -1,0 +1,66 @@
+
+	
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>js的写法</title>
+		<!--
+			1.js代码写在标签上       样式  行内样式 
+			2.js代码写在页面中      样式   内嵌样式 
+			3.js代码写在一个js文件中    样式 外联样式
+		
+		-->
+		<!--在页面中书写 script 闭合标签  可以在这个标签中书写 js 代码
+			
+			 1） 这个script 代码作用域当前页面 
+			 2） 在里面写任意行js代码
+			 3） 一个页面中 可以存在无限个 script   运行流畅从上到下
+			 4）script 脚本可以写在页面上的任何位置
+			
+		-->
+		<!--<script type="text/javascript">
+			alert(1);
+	
+		</script>-->
+		
+		<!--引入外部的js 脚本
+			
+			src 指向要引入的js脚本
+			
+			单标签和双标签  
+			
+			script 外联式 的 一定是一个双标签 
+			
+			script 如果有src 属性 那么  scirpt中的代码 无意义  只有src 执行的js代码才有意义
+		-->
+		<script type="text/javascript" src="js/a.js" >
+	
+		</script>
+			
+		
+		
+	</head>
+	<body>
+		
+		<!--
+			onclick  事件   点击按钮的时候触发
+			
+			javascript:alert(1);  称之为js脚本语言 
+			
+			如果将js 脚本语言写在行内容 ： 
+			    1） 必须要有事件函数  什么是事件函数呢？  后面学  
+			         简单知道: onclick  表示一个事件函数    点击的时候 触发
+			    2） 事件函数  javascript:
+			    3）   在javascript: 之后书写js 代码 
+			    注意: 行内的代码只能写一行并且这个代码只能作用域这一样    
+			    针对行内弊端:  行内中写js代码不推荐的
+			   
+			
+		-->
+		<input type="button" value="点击" onclick="javascript:alert(1);" />
+			<input type="button" value="点击2"/>
+	</body>
+</html>
+
+

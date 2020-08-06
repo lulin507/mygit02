@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			
+			
+			
+			/**
+			 * 
+			 * java 的数据类型  
+			 *      基本数据类型  8 中 
+			 *      引用数据类型 
+			 * 
+			 * 
+			 * js 的类型分类 
+			 *     简单数据类型
+					 *   number 类型  
+					 *       整数 小数 
+					 *   string 类型  js 中 "" 等价于  '']
+					 *   boolean 类型  true false 
+					 * 
+					 *   undefined 类型  未定义
+					 *   null 类型  空  如果作为值来讲  Object  
+			 *      
+			 * 
+			 *     复杂数据类型 
+			 * 
+			 */
+			// 定义变量 
+			var a = 10.1;
+			console.info(a);
+			// 判断js的类型 
+			/**
+			 * 采用  typeof 来判断 
+			 */
+			console.info(typeof a); // number 
+			console.info(Object.prototype.toString.call(a)); // [object Number]
+			
+			var b = '上元教育';
+			console.info(typeof b); // string  
+			console.info(Object.prototype.toString.call(b)); // [object String]
+			
+			var c = true;
+			console.info(typeof c); // boolean  
+			console.info(Object.prototype.toString.call(c)); // [object Boolean]
+			
+			// 比java多个两个类型 
+			var d=undefined;
+			console.info(typeof d);
+			console.info(Object.prototype.toString.call(d)); 
+			
+			// null类型  作为一个值  官网说 也是一个类型  null 但是我们演示不出来
+			var e=null;
+			console.info(typeof e); // object
+			console.info(Object.prototype.toString.call(e));  // null
+			
+			// 和java的不同 
+			// java 的变量名不能重复  js 中 变量名可以重复  后面的会覆盖掉前面的 【即使不报错 我们也不推荐】
+			var e = 10;
+			console.info(typeof e); // numer
+			console.info(Object.prototype.toString.call(e));  // Number
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

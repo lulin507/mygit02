@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>电视剧列表</title>
+		<style type="text/css">
+			/* 编程小技巧    设置一些通用的编程*/
+			
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			
+			body {
+				background: #fff;
+				color: #3C3C3C;
+				font: 12px arial, helvetica, "PingFang SC", "Microsoft YaHei", sans-serif;
+			}
+			
+			.fl {
+				float: left;
+			}
+			
+			.fr {
+				float: right;
+			}
+			
+			.clearbox::after {
+				content: 'a';
+				display: block;
+				clear: both;
+				width: 0;
+				height: 0;
+				overflow: hidden;
+			}
+			
+			a {
+				text-decoration: none;
+				color: #3C3C3C;
+			}
+			
+			a:hover {
+				text-decoration: underline;
+			}
+			
+			ul {
+				list-style: none;
+			}
+			
+			.box {
+				width: 330px;
+				margin: 100px auto;
+			}
+			
+			.box .box-header {
+				border: 1px solid #ccc;
+				line-height: 30px;
+				background: url(img/1.gif) no-repeat 15px center;
+				text-indent: 42px;
+			}
+			
+			.box .box-main {
+				margin-top: 15px;
+			}
+			
+			.box .box-main .box-main-left img {
+					border: 1px solid #ccc;
+					padding: 2px;
+			} 
+			
+			.box .box-main .box-main-right h5 {
+				line-height: 35px;
+			}
+			
+			.box .box-main .box-main-right p {
+				line-height: 24px;
+			}
+			
+			.box .box-footer {
+				margin-top: 15px;
+			}
+			
+			.box .box-footer li {
+				height: 30px;
+			}
+			
+			.box .box-footer li span {
+				float: right;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="box">
+			<!--头部-->
+			<div class="box-header">
+				<h5>明星荐片</h5>
+			</div>
+			<div class="box-main clearbox">
+				<div class="box-main-left fl">
+					<img src="img/3.gif" />
+				</div>
+				<div class="box-main-right fr">
+					<h5>
+						<a href="#">周秀娜荐片:让子弹飞</a>
+					</h5>
+					<p>导演：姜文</p>
+					<p>主演：姜文 周润发 葛优</p>
+					<p>点评：我最喜欢的要算《让子弹飞》</p>
+					<p>了,超喜欢...<a href="#">[详情]</a></p>
+				</div>
+			</div>
+			<ul class="box-footer">
+                <li>
+                	<a href="#">《巴别塔》：好的故事引人深思</a>
+                	<span>阿朵</span>
+                </li>
+                <li>
+                	<a href="#">《洛杉矶之战》：外星人那么弱智？</a>
+                	<span>丁子俊</span>
+                </li>
+                  <li>
+                	<a href="#">《让子弹飞》：武侠里也可以有爱情</a>
+                	<span>周秀娜</span>
+                </li>
+                <li>
+                	<a href="#">《剑雨》：好的故事引人深思</a>
+                	<span>叶年生</span>
+                </li>
+                <li>
+                	<a href="#">《春风沉醉的夜晚》：非常真实</a>
+                	<span>如小果</span>
+                </li>
+                 <li>
+                	<a href="#">《克洛伊》：故事简单却细致</a>
+                	<span>刘若英</span>
+                </li>
+                
+                
+			</ul>
+		</div>
+	</body>
+
+</html>

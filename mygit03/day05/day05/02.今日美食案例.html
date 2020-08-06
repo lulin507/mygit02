@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>今日美食</title>
+		<style type="text/css">
+			/*通用样式*/
+			
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			
+			body {
+				background: #fff;
+				color: #3C3C3C;
+				font-size: 12px;
+			}
+			
+			.fl {
+				float: left;
+			}
+			
+			.fr {
+				float: right;
+			}
+			
+			.clearbox::after {
+				content: 'a';
+				display: block;
+				clear: both;
+				width: 0;
+				height: 0;
+				overflow: hidden;
+			}
+			
+			ul {
+				list-style: none;
+			}
+			
+			img {
+				vertical-align: middle;
+			}
+			/*书写样式 */
+			
+			.box {
+				width: 280px;
+				border: 1px solid blue;
+				border-radius: 8px;
+				margin: 100px auto;
+			}
+			
+			.box .box-header {
+				height: 50px;
+				padding: 20px 15px 15px 30px;
+			}
+			
+			.box .box-header h2 {
+				font-size: 15px;
+			}
+			
+			.box .box-header h2:first-child {
+				color: #f00;
+				margin-right: 10px;
+			}
+			
+			.box .box-main {
+				padding-bottom: 22px;
+			}
+			
+			.box .box-main li {
+				padding: 0 20px;
+				margin-top: 12px;
+			}
+			
+			.box .box-main li:first-child {
+				margin-top: 0;
+			}
+			
+			.box .box-main li:first-child>a {
+				position: relative;
+			}
+			
+			.box .box-main li:first-child>a::before {
+				content: "";
+				display: block;
+				background-image: url(img/shen.png);
+				width: 42px;
+				height: 40px;
+				position: absolute;
+				top: -12px;
+				right: -15px;
+			}
+			
+			.box .box-main li div {
+				margin-left: 40px;
+			}
+			
+			.box .box-main li div h5 a {
+				color: red;
+			}
+			
+			.box .box-main li div p {
+				color: #ccc;
+				line-height: 22px;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="box">
+			<div class="box-header clearbox">
+				<div class="box-header-left clearbox fl">
+
+					<h2 class="fl">SHOP</h2>
+					<h2 class="fl">今日推荐</h2>
+				</div>
+				<a href="#" class="fr">
+					<img src="img/more.gif" />
+				</a>
+			</div>
+			<ul class="box-main">
+				<li class="clearbox">
+					<a href="#" class="fl">
+						<img src="img/img7.gif" />
+
+					</a>
+
+					<div class="fl">
+						<h5><a href="#">汉来国际美食百货</a></h5>
+						<p>口味：创意中餐</p>
+						<p>区域：朝阳/CBD</p>
+					</div>
+				</li>
+				<li class="clearbox">
+					<a href="#" class="fl">
+						<img src="img/img7.gif" />
+					</a>
+
+					<div class="fl">
+						<h5><a href="#">汉来国际美食百货</a></h5>
+						<p>口味：创意中餐</p>
+						<p>区域：朝阳/CBD</p>
+					</div>
+				</li>
+				<li class="clearbox">
+					<a href="#" class="fl">
+						<img src="img/img7.gif" />
+					</a>
+
+					<div class="fl">
+						<h5><a href="#">汉来国际美食百货</a></h5>
+						<p>口味：创意中餐</p>
+						<p>区域：朝阳/CBD</p>
+					</div>
+				</li>
+				<li class="clearbox">
+					<a href="#" class="fl">
+						<img src="img/img7.gif" />
+					</a>
+
+					<div class="fl">
+						<h5><a href="#">汉来国际美食百货</a></h5>
+						<p>口味：创意中餐</p>
+						<p>区域：朝阳/CBD</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</body>
+
+</html>

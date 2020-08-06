@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>数据类型转换 </title>
+		<script type="text/javascript">
+			// 1  任意类型 转为   字符串类型 
+			// 1. toString()  只适用于  boolean 以及 number 类型转换 
+			var a = 1;
+			 a = true;
+			console.info(typeof a.toString())  // string 
+			
+			// 2。 String()  适用于任意的简单数据类型
+			a = 1;
+			a = undefined;
+			a = null;
+			console.info(typeof String(a));
+			
+			// 3  同java一样 +  ""+   
+			a = 1;
+			a = undefined;
+			console.info(typeof (""+a));
+				
+		
+			// 2 其他类型型转为 数字类型 
+			/**
+			 * 明确一定 必须要能够转换成数字的
+			 *   
+			 */
+			
+		
+			a = "10";
+			a = true; // 底层就是1
+			a = false;  // 底层就是0
+			a = undefined;
+			a = null;
+				a = "123w";
+			/**
+			 * 1  通过Number 构造转 
+			 *    如果是非数字/undefined   NaN 不是一个数字 
+			 *    如果是数字   可以将整数或者是小数的字符串转为数字
+			 *    boolean 类型 true 转为 1  false 转为 0 
+			 *    null 类型 转为  0 
+			 *    
+			 */
+			console.info(Number(a));  // NaN
+			console.info(typeof Number(a));
+			console.info("----------------")
+			/**
+			 * 通过 
+			 *     parseInt()  只能转换成整数 
+			 *     paeseFloat()  只能转成成小数
+			 * 1.将以数字开头的部分进行截取 给我们进行转换
+			 * 2. 只能将 boolean undefined  null 转为 NaN
+
+			 * 
+			 */
+			a = "123.5元";
+			a = null;
+			console.info(parseInt(a));  // NaN
+			console.info(typeof parseInt(a)); // number
+			console.info("----------------")
+			// 3 其他类型转为boolean 类型
+			// 1  利用构造  Boolean()   
+			/**
+			 * 数字类型转为boolean 类型 
+			 *    非0 的数字都是true  0 false 
+			 * string 类型转为boolean 类型 
+			 *    非空字符串都是true  空""  false
+		       undefined 类型转为boolean 烈性 
+		            false 
+		       null  类型转为boolean类型 
+		          false 
+		            
+			 */
+			a =-1;
+			a = " ";
+			a = undefined;
+			a = null;
+			console.info(Boolean(a));
+			console.info(typeof Boolean(a));
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
